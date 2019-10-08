@@ -16,7 +16,7 @@ namespace Project_Eluler.Problems
         {
             ulong testNum = 600851475143;
 
-            ulong largestPrime = 3;
+            ulong largestPrime = 2;
 
             while (testNum != 1)
             {
@@ -25,7 +25,7 @@ namespace Project_Eluler.Problems
                     testNum /= largestPrime;
                 }
                 else
-                    largestPrime = PrimeCalculator.FindNextPrime(largestPrime);
+                    largestPrime = PrimeCalculator.FindNextPrime(largestPrime + 1);
             }
             Console.WriteLine($"Answer:{largestPrime}\n");
         }

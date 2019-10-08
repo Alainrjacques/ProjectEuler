@@ -15,12 +15,12 @@ namespace Project_Eluler.Problems
 
         public void SolveProblem()
         {
-            ulong count = 1, targetPrime = 1000001, primeNum = 1;
+            ulong primeCount = 1, primeCountCap = 1000001, primeNum = 0;
             //Count is 1 to count for prime number of 2
-            while (count < targetPrime)
+            while (primeCount < primeCountCap)
             {
-                primeNum = PrimeCalculator.FindNextPrime(primeNum);
-                count++;
+                primeNum = PrimeCalculator.FindNextPrime(primeNum + 1);
+                primeCount++;
             }
             Console.WriteLine($"Answer:{primeNum}\n");
         }
